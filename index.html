@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>movie app</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid ">
+                <a class="navbar-brand text-light" href="#">Popcorn Bits Cinema</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                        <li class="nav-item">
+                            <a class="nav-link active text-light" aria-current="page" href="#">Now playing</a>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Generes
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="action " id="action">Action</a></li>
+                                <li><a href="#" class="adventure" id="adventure">Adventure</a></li>
+                                <li><a href="#" class="animation" id="animation">Animation</a></li>
+                                <li><a href="#" class="comedy" id="comedy">Comedy</a></li>
+                                <li><a href="#" class="crime" id="crime">Crime</a></li>
+                                <li><a href="#" class="drama" id="drama">Drama</a></li>
+                                <li><a href="#" class="family" id="family">Family</a></li>
+                                <li><a href="#" class="fantasy" id="fantasy">Fantasy</a></li>
+                                <li><a href="#" class="history" id="history">History</a></li>
+                                <li><a href="#" class="music" id="music">Music</a></li>
+                                <li><a href="#" class="romance" id="romance">Romance</a></li>
+                                <li><a href="#" class="scifi" id="scifi">Science Fiction</a></li>
+                                <li><a href="#" class="thriller" id="thriller">Thriller</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" aria-disabled="true">GitHup Repo</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light bg-light text-bg-light" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row mt-3" id="rowdata">
+                <h1 class=" mb-3 text-white">Now Playig</h1>
+               
+            </div>
+        </div>
+    </main>
+</body>
+<script src="./js/movieapp.js"></script>
+<script src="./js/bootstrap.bundle.min.js"></script>
+
+</html>
