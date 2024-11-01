@@ -33,11 +33,53 @@ a{
 .dropdown-menu li:hover{
     background: #0000006b;
     transition: all 1s;
-    a{
-        color: #ffffff;}
+   
 }
 
+.dropdown-menu li:hover a{
+    
+     color: #ffffff;
+        
+}
 
+.movie{
+    position: relative;
+    overflow: hidden;
+    object-fit: fill;
+    cursor: pointer;
+}
+#rowdata .movie:hover .caption{
+    top:0;
+}
+#rowdata .movie img {
+    transition: all 1s;
+}
+#rowdata .movie h2{
+    transition: all 1s;
+}
+#rowdata .movie:hover img{
+    transform: scale(1.1);
+}
+#rowdata .movie:hover h2{
+    transform: scale(1.1);
+}
+#rowdata .caption{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top:180%;
+    background: #00000067;
+    transition: all 1s;
+
+}
 @media (min-width: 768px) {
     .col-md-1 {
         width: 8.33%;
