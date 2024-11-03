@@ -80,6 +80,35 @@ a{
     transition: all 1s;
 
 }
+#movieDetails{
+    background-color: #ffffffe0;
+    width: 60%;
+    height: 80vh;
+    margin: auto;
+    position: relative;
+    
+    
+}
+#movieDetails i.fa-regular{
+    position: absolute;
+    top: -0rem;
+    right: 0;
+}
+#movieDetails img{
+    width: 90%;
+    height:80vh;
+}
+#movieDetails .caption a{
+    cursor: pointer;
+}
+#close-button{
+    cursor: pointer;
+}
+a{
+    cursor: pointer;
+    
+}
+
 @media (min-width: 768px) {
     .col-md-1 {
         width: 8.33%;

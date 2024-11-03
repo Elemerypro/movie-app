@@ -22,8 +22,8 @@
                 </button>
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                        <li class="nav-item">
-                            <a class="nav-link active text-light" aria-current="page" href="#">Now playing</a>
+                        <li  class="nav-item">
+                            <a onclick="nowPlaying()" class="nav-link active text-light" aria-current="page" href="#">Now playing</a>
                         </li>
                         
                         <li class="nav-item dropdown">
@@ -32,27 +32,27 @@
                                 Generes
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="#" class="action " id="action">Action</a></li>
-                                <li><a href="#" class="adventure" id="adventure">Adventure</a></li>
-                                <li><a href="#" class="animation" id="animation">Animation</a></li>
-                                <li><a href="#" class="comedy" id="comedy">Comedy</a></li>
-                                <li><a href="#" class="crime" id="crime">Crime</a></li>
-                                <li><a href="#" class="drama" id="drama">Drama</a></li>
-                                <li><a href="#" class="family" id="family">Family</a></li>
-                                <li><a href="#" class="fantasy" id="fantasy">Fantasy</a></li>
-                                <li><a href="#" class="history" id="history">History</a></li>
-                                <li><a href="#" class="music" id="music">Music</a></li>
-                                <li><a href="#" class="romance" id="romance">Romance</a></li>
-                                <li><a href="#" class="scifi" id="scifi">Science Fiction</a></li>
-                                <li><a href="#" class="thriller" id="thriller">Thriller</a></li>
+                                <li><a onclick="getMoviesByGenre(28)" href="#" class="action " id="action">Action</a></li>
+                                <li><a onclick="getMoviesByGenre(12)" href="#" class="adventure" id="adventure">Adventure</a></li>
+                                <li><a onclick="getMoviesByGenre(16)" href="#" class="animation" id="animation">Animation</a></li>
+                                <li><a onclick="getMoviesByGenre(35)" href="#" class="comedy" id="comedy">Comedy</a></li>
+                                <li><a onclick="getMoviesByGenre(80)" href="#" class="crime" id="crime">Crime</a></li>
+                                <li><a onclick="getMoviesByGenre(18)" href="#" class="drama" id="drama">Drama</a></li>
+                                <li><a onclick="getMoviesByGenre(10751)" href="#" class="family" id="family">Family</a></li>
+                                <li><a onclick="getMoviesByGenre(14)" href="#" class="fantasy" id="fantasy">Fantasy</a></li>
+                                <li><a onclick="getMoviesByGenre(36)" href="#" class="history" id="history">History</a></li>
+                                <li><a onclick="getMoviesByGenre(10402)" href="#" class="music" id="music">Music</a></li>
+                                <li><a onclick="getMoviesByGenre(10749)" href="#" class="romance" id="romance">Romance</a></li>
+                                <li><a onclick="getMoviesByGenre(878)" href="#" class="scifi" id="scifi">Science Fiction</a></li>
+                                <li><a onclick="getMoviesByGenre(53)" href="#" class="thriller" id="thriller">Thriller</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" aria-disabled="true">GitHup Repo</a>
+                            <a class="nav-link text-light" aria-disabled="true" href="https://github.com/Elemerypro/movie-app">GitHup Repo</a>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <input id="searchinput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-light bg-light text-bg-light" type="submit">Search</button>
                     </form>
                 </div>
@@ -61,13 +61,19 @@
     </header>
     <main>
         <div class="container">
+            <h1 class=" mb-3 text-white">Now Playig</h1>
             <div class="row mt-3" id="rowdata">
-                <h1 class=" mb-3 text-white">Now Playig</h1>
-               
+
             </div>
+           
+        </div>
+        <div id="movieDetails" class="rounded-2 d-none lightbox-container position-fixed top-0 bottom-0 start-0 end-0 justify-content-center align-items-center">
+            
         </div>
     </main>
 </body>
+
+<script src="./js/jquery-3.7.1.min.js"></script>
 <script src="./js/movieapp.js"></script>
 <script src="./js/bootstrap.bundle.min.js"></script>
 
