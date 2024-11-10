@@ -36,10 +36,10 @@ function display() {
      
              <div class="col-lg-3 col-md-6 movie  ">
                     <div class="image">
-                        <img src="${imageBaseUrl+'w300'+nowPlayingMovie[i].poster_path}" alt="">
+                        <img src="${imageBaseUrl + 'w300' + nowPlayingMovie[i].poster_path}" onclick="movieByDetails(${i})" alt="">
                     </div>
                     <h2 class="h4 text-center text-white" >${nowPlayingMovie[i].title.split(" ").slice(0, 4).join(" ")}</h2>
-                    <div class="caption">
+                    <div class="caption" onclick="movieByDetails(${i})">
                        <h3 class="rating"><i class="fa-solid fa-star text-warning"></i> ${nowPlayingMovie[i].vote_average}</h3>
                        <h3 class="votecount h5">${nowPlayingMovie[i].vote_count} Voter</h3>
                        <p class="overview ">${nowPlayingMovie[i].overview.split(" ").slice(0, 20).join(" ") }</p>
@@ -102,31 +102,31 @@ function displayMoviesByGenre() {
 }
 
 
-$('#rowdata').on('click', function () {
-   
-    for (let i = 0; i < nowPlayingMovie.length; i++) {
-        $('#movieDetails').html( `
+ function movieByDetails(index){
+     let cartona = ``
+     for (let i = 0; i < nowPlayingMovie.length; i++){
+        cartona = `
             <i class="fa-regular fa-circle-xmark " id="close-button"></i>
             <div class="col-md-12 col-lg-6">
-                <img src="${imageBaseUrl+'w300'+nowPlayingMovie[i].poster_path}" alt="">
+                <img src="${imageBaseUrl + 'w300' + nowPlayingMovie[index].poster_path}" alt="">
             </div>
-            <div class="col-md-12 col-lg-6 caption d-flex flex-column gy-5 gap-3 p-2">
-                <h1 class="movieTittle " >${nowPlayingMovie[i].title.split(" ").slice(0, 4).join(" ")}</h1>
+            <div class="col-md-12 col-lg-6 caption  gy-5 gap-3 p-2">
+                <h1 class="movieTittle " >${nowPlayingMovie[index].title.split(" ").slice(0, 4).join(" ")}</h1>
                 <a class="text-primary" href='https://www.youtube.com/watch?v='><i class="fa-solid fa-play"></i> Playing Trailer</a>
-                <p class="movieView">${nowPlayingMovie[i].overview}</p>
-                <h4 class="releaseDate">Release date ${nowPlayingMovie[i].release_date}</h4>
-                <h5 class="movieRate h4"><i class="fa-solid fa-star text-warning"></i> Rating: ${nowPlayingMovie[i].vote_average}</h5>
+                <p class="movieView">${nowPlayingMovie[index].overview}</p>
+                <h4 class="releaseDate">Release date ${nowPlayingMovie[index].release_date}</h4>
+                <h5 class="movieRate h4"><i class="fa-solid fa-star text-warning"></i> Rating: ${nowPlayingMovie[index].vote_average}</h5>
             </div>
-        `);
-    }
-
+        `;
+     }
+     movieDetails.innerHTML = cartona
     
     $('#movieDetails').removeClass('d-none').addClass('d-flex');
     $('#close-button').on('click', function () {
         $('#movieDetails').removeClass('d-flex').addClass('d-none');
     })
 
-});
+};
 
 
 $('#searchinput').on('input', async function searchMovie() {
