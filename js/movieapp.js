@@ -107,10 +107,10 @@ function displayMoviesByGenre() {
      for (let i = 0; i < nowPlayingMovie.length; i++){
         cartona = `
             <i class="fa-regular fa-circle-xmark " id="close-button"></i>
-            <div class="col-md-12 col-lg-6">
+            <div class="col-sm-12 col-lg-6 p-0 image">
                 <img src="${imageBaseUrl + 'w300' + nowPlayingMovie[index].poster_path}" alt="">
             </div>
-            <div class="col-md-12 col-lg-6 caption  gy-5 gap-3 p-2">
+            <div class="col-sm-12 col-lg-6 caption d-flex flex-column gap-4 p-2">
                 <h1 class="movieTittle " >${nowPlayingMovie[index].title.split(" ").slice(0, 4).join(" ")}</h1>
                 <a class="text-primary" href='https://www.youtube.com/watch?v='><i class="fa-solid fa-play"></i> Playing Trailer</a>
                 <p class="movieView">${nowPlayingMovie[index].overview}</p>

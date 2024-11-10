@@ -86,134 +86,32 @@ a{
     height: 80vh;
     margin: auto;
     position: relative;
-    
+       
+}
+#movieDetails #close-button {
+    position: absolute;
+    cursor: pointer;
+    left: 48.75rem;
+    top: 0;
+    display: inline-block;
     
 }
-#movieDetails i.fa-regular{
-    position: absolute;
-    top: -0rem;
-    right: 0;
+#movieDetails .image{
+    height:80vh; 
+    left: 0;
+    bottom: 0;
+    position:absolute; 
+    z-index: -2; 
 }
 #movieDetails img{
-    width: 90%;
-    height:80vh;
-}
-#movieDetails .caption a{
-    cursor: pointer;
-}
-#close-button{
-    cursor: pointer;
+    height: 100%;
 }
 a{
     cursor: pointer;
     
 }
-
-@media (min-width: 768px) {
-    .col-md-1 {
-        width: 8.33%;
-    }
-
-    .col-md-2 {
-        width: 16.6%;
-    }
-
-    .col-md-3 {
-        width: 25%;
-    }
-
-    .col-md-4 {
-        width: 33.33%;
-    }
-
-    .col-md-5 {
-        width: 41.6%;
-    }
-
-    .col-md-6 {
-        width: 50%;
-
-    }
+#movieDetails .caption{
+    right: 0;
+    bottom: 0;
+    position:absolute; 
 }
-
-/* // Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-    .col-lg-1 {
-        width: 8.33%;
-    }
-
-    .col-lg-2 {
-        width: 16.6%;
-    }
-
-    .col-lg-3 {
-        width: 25%;
-    }
-
-    .col-lg-4 {
-        width: 33.33%;
-    }
-
-    .col-lg-5 {
-        width: 41.6%;
-    }
-
-    .col-lg-6 {
-        width: 50%;
-    }
-}
-
-/* // X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-    .col-xl-1 {
-        width: 8.33%;
-    }
-
-    .col-xl-2 {
-        width: 16.6%;
-    }
-
-    .col-xl-3 {
-        width: 25%;
-    }
-
-    .col-xl-4 {
-        width: 33.33%;
-    }
-
-    .col-xl-5 {
-        width: 41.6%;
-    }
-
-    .col-xl-6 {
-        width: 50%;
-    }
-}
-
-/* // XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px) {
-    .col-xxl-1 {
-        width: 8.33%;
-    }
-
-    .col-xxl-2 {
-        width: 16.6%;
-    }
-
-    .col-xxl-3 {
-        width: 25%;
-    }
-
-    .col-xxl-4 {
-        width: 33.33%;
-    }
-
-    .col-xxl-5 {
-        width: 41.6%;
-    }
-
-    .col-xxl-6 {
-        width: 50%;
-    }
-}
-
