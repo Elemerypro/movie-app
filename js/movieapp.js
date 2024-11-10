@@ -133,7 +133,7 @@ $('#searchinput').on('input', async function searchMovie() {
     let searchTerm = $('#searchinput').val().trim();
     
     try {
-        let res = await fetch(`http://api.themoviedb.org/3/search/movie?api_key=2a2986e3ee3a896b3558c5f051ded1d8&language=en-US&page=1&include_adult=false&query=${(searchTerm)}`);
+        let res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=2a2986e3ee3a896b3558c5f051ded1d8&language=en-US&page=1&include_adult=false&query=${(searchTerm)}`);
         let finalresult = await res.json();
         console.log(finalresult.results);
         nowPlayingMovie = finalresult.results
@@ -155,10 +155,10 @@ function searchDisplay(){
      
              <div class="col-lg-3 col-md-6 movie  ">
                     <div class="image">
-                        <img src="${imageBaseUrl + 'w300' + nowPlayingMovie[i].poster_path}" alt="">
+                        <img onclick="movieByDetails(${i})" src="${imageBaseUrl + 'w300' + nowPlayingMovie[i].poster_path}" alt="">
                     </div>
                     <h2 class="h4 text-center text-white" >${nowPlayingMovie[i].title.split(" ").slice(0, 4).join(" ")}</h2>
-                    <div class="caption">
+                    <div onclick="movieByDetails(${i})" class="caption">
                        <h3 class="rating"><i class="fa-solid fa-star text-warning"></i> ${nowPlayingMovie[i].vote_average}</h3>
                        <h3 class="votecount h5">${nowPlayingMovie[i].vote_count} Voter</h3>
                        <p class="overview ">${nowPlayingMovie[i].overview.split(" ").slice(0, 20).join(" ")}</p>
